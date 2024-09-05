@@ -1,0 +1,120 @@
+*{                   /* --------- Reset -------- */
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(0, 0, 4);
+    color: aliceblue;
+}
+
+h1{
+    background-color: #8c162a;
+    font-size: 1.2em;
+    padding: 0.6em;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    text-align: center;
+
+    animation: alterar-titulo linear both;          /* ------- Animacion de titulo -------- */
+    animation-timeline: scroll(root);
+    animation-range: 0 200px;
+}
+
+@keyframes alterar-titulo{          /* ------- Animacion de titulo -------- */
+    to{
+        font-size: 1.6em;
+        background: rgba(210, 251, 255, 0.4);
+        color: black;
+        backdrop-filter: blur(4px);     /* Efecto de desenfoque */
+    }
+}
+
+
+
+main{
+   padding: 1em;
+}
+
+img{        /*  Estilos de imagenes   */
+    width: 100%;
+    margin: .6em 0;
+    border-radius: 0.4em;
+
+    animation: revelar linear both; /*  Animacion de imagenes   */
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+}
+
+
+                            /* ------- Animacion de imagenes -------- */
+@keyframes revelar{ 
+    from{
+        opacity: 0;
+        translate: 0 100px;
+        scale: .6;
+    }
+
+    to{
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+    }
+}
+
+
+
+                            /* ------- Responsive pantalla intermedia -------- */
+@media all and (min-width:480px)    {
+    h1{
+        font-size: 1.6em;
+    }
+    main{
+        padding: 1em 4em;
+        column-gap: 4em;
+        columns: 2;
+    }
+    img{
+        margin: .6em 0;
+        width: 100%;
+    }
+
+
+    @keyframes alterar-titulo{                 /*  Animacion de titulo */
+        to{
+            background: rgba(210, 251, 255, 0.4);
+            color: black;
+            /* font-size: 1.2em; */
+            backdrop-filter: blur(4px);
+        }
+    }
+}
+
+
+
+                            /* ------- Responsive pantalla grande -------- */
+
+@media all and (min-width:1204px)    {
+    h1{
+        font-size: 2em;
+    }
+    main{
+        columns: 3;
+        column-gap: 2em;
+        padding: 1em 2em;
+    }
+
+        
+    @keyframes alterar-titulo{              /*  Animacion de titulo  */
+        to{
+            background: rgba(210, 251, 255, 0.4);
+            color: black;
+            font-size: 2.2em;
+            backdrop-filter: blur(4px);
+        }
+    }
+}
