@@ -11,7 +11,7 @@ body{
 }
 
 h1{
-    background-color: #8c162a;
+    background-color: #1a0f55;
     font-size: 1.2em;
     padding: 0.6em;
 
@@ -33,7 +33,6 @@ h1{
         backdrop-filter: blur(4px);     /* Efecto de desenfoque */
     }
 }
-
 
 
 main{
@@ -73,11 +72,13 @@ img{        /*  Estilos de imagenes   */
     h1{
         font-size: 1.6em;
     }
+
     main{
-        padding: 1em 4em;
-        column-gap: 4em;
+        padding: 1em;
+        column-gap: 2em;
         columns: 2;
     }
+
     img{
         margin: .6em 0;
         width: 100%;
@@ -102,6 +103,7 @@ img{        /*  Estilos de imagenes   */
     h1{
         font-size: 2em;
     }
+    
     main{
         columns: 3;
         column-gap: 2em;
